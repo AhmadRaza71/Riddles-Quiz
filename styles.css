@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: #121212;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.quiz-container {
+    background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+    max-width: 600px;
+    width: 90%;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #00ff9f88;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    color: #00ff9f;
+    text-shadow: 0 0 10px #00ff9faa;
+}
+
+#question-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 0 0 8px #00ff9faa;
+}
+
+.option {
+    display: block;
+    width: 80%;
+    margin: 12px auto;
+    padding: 14px 25px;
+    font-size: 1.2rem;
+    color: #ddd;
+    background: #222;
+    border: 2px solid #333;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: inset 0 0 5px #0008;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.option:hover:not(:disabled) {
+    background: #00ff9f44;
+    color: #000;
+    border-color: #00ff9f;
+    box-shadow: 0 0 12px #00ff9f88;
+}
+
+.option:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.correct {
+    background-color: #00c851 !important;
+    color: white !important;
+    border-color: #007e33 !important;
+    box-shadow: 0 0 12px #00c851aa !important;
+    animation: pulse-green 0.6s;
+}
+
+.incorrect {
+    background-color: #ff3547 !important;
+    color: white !important;
+    border-color: #b22234 !important;
+    box-shadow: 0 0 12px #ff3547aa !important;
+    animation: pulse-red 0.6s;
+}
+
+@keyframes pulse-green {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes pulse-red {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
